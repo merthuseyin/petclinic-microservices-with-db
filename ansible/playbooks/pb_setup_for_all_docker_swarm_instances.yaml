@@ -12,7 +12,7 @@
       state: started
       enabled: yes
   - name: add ec2-user to docker group
-    shell: "usermod -a -G docker ec2-user"
+    shell: "usermod -a -G docker ec2-user" # env. var ları kullanabilmek için, mesela
   - name: install docker compose.
     get_url:
       url: https://github.com/docker/compose/releases/download/1.26.2/docker-compose-Linux-x86_64
